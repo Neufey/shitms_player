@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-card">
+        <h1>Aудиоплеер</h1>
+        <div class="sub">Загрузи свой файл — и слушай без ограничений</div>
+        
+        <div class="upload-area">
+            <div class="upload-zone" id="uploadZone">
+                <button class="upload-btn" id="uploadBtn" title="Выбрать аудиофайл">➕</button>
+                <div class="upload-text">Перетащи файл сюда или кликни</div>
+            </div>
+            
+            <div class="file-name" id="fileNameDisplay" title="Кликни чтобы выбрать файл">
+                файл не выбран
+            </div>
+            
+            <input type="file" id="fileInput" accept="audio/*" style="display: none;">
+        </div>
+
+        <div class="file-type" id="fileTypeIndicator">⏤</div>
+        <div class="track-title" id="trackTitle">———</div>
+
+        <div class="player-container">
+            <audio id="audioPlayer" class="audio-element" controls controlslist="nodownload">
+                Ваш браузер не поддерживает аудио элемент.
+            </audio>
+        </div>
+
+        <div class="file-hint">
+            <div class="hint-item">
+                Поддерживаемые файлы: <strong>MP3, M4A, WAV, OGG, FLAC</strong>
+            </div>
+            <div class="footer-flex">
+                <button class="reset-btn" id="resetBtn" title="Сбросить плеер">⟲ Сбросить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
